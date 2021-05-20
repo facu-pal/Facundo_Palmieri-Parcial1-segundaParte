@@ -12,6 +12,8 @@
 #include "recaudacion.h"
 #include "utn.h"
 
+void informeB (Recaudacion arrayRecaudacion[], int lenRecaudaciones, Contribuyente ArrayContribuyente[], int lenContribuyente);
+
 void informeC (Recaudacion arrayRecaudacion[], int lenRecaudaciones, Contribuyente ArrayEmpleado[], int lenContribuyente);
 
 void informeD(Recaudacion arrayRecaudacion[], int lenRecaudaciones, Contribuyente ArrayEmpleado[], int lenContribuyente);

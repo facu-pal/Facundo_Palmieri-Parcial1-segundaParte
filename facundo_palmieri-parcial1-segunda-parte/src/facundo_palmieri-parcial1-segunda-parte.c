@@ -51,7 +51,7 @@ int main(void) {
 
 			scanf("%d", &menu);
 			switch (menu) {
-			case 1://alta contribuyente
+			case 1:
 				if (addContribuyente(contribuyente, TAME_STRUC_CONTRIBUYENTE, &idContribuyente) == 0) {
 					printf("\n El contribuyente se a dado de alta correctamente");
 					contContribuyente++;
@@ -59,7 +59,7 @@ int main(void) {
 					printf("\nERROR. El contribuyente no se a dado de alta correctamente");
 				}
 				break;
-			case 2://modificar contribuyente
+			case 2:
 				if (contContribuyente > 0) {
 					imprimirContribuyentes(contribuyente, TAME_STRUC_CONTRIBUYENTE);
 					printf("\n");
@@ -72,7 +72,7 @@ int main(void) {
 				}
 
 				break;
-			case 3://baja contribuyente y recaudacion
+			case 3:
 				if (contContribuyente != 0) {
 					imprimirContribuyentes(contribuyente, TAME_STRUC_CONTRIBUYENTE);
 					printf("\n");
@@ -85,7 +85,7 @@ int main(void) {
 					printf("\nNo se modifico el contribuyente\n");
 					}
 				break;
-			case 4://alta recaudacion
+			case 4:
 				if (contContribuyente != 0) {
 					imprimirContribuyentes(contribuyente, TAME_STRUC_CONTRIBUYENTE);
 					printf("\n");
@@ -93,7 +93,7 @@ int main(void) {
 					contRecaudaciones++;
 				}
 				break;
-			case 5:// Refinanciar recaudacion
+			case 5:
 				if (contContribuyente != 0 && contRecaudaciones != 0) {
 					printsRecaudaciones(recaudacion, TAME_STRUC_RECAUDACION);
 					printf("\n");
@@ -107,7 +107,7 @@ int main(void) {
 
 				}
 				break;
-			case 6://Saldar recaudacion
+			case 6:
 				if (contContribuyente != 0 && contRecaudaciones != 0) {
 					printsRecaudaciones(recaudacion, TAME_STRUC_RECAUDACION);
 					printf("\n");
@@ -121,10 +121,10 @@ int main(void) {
 					posicion = -1;
 				}
 				break;
-			case 7://Imprimir contribuyente
+			case 7:
 				imprimirContribuyentes(contribuyente, TAME_STRUC_CONTRIBUYENTE);
 				break;
-			case 8://Imprimir recaudacion
+			case 8:
 				printsRecaudaciones(recaudacion, TAME_STRUC_RECAUDACION);
 				break;
 			case 9://Informe
@@ -142,8 +142,7 @@ int main(void) {
 						printf("No lo hice informe A");
 						break;
 					case 2:
-						printf("No lo hice informe B");
-
+						informeB(recaudacion, TAME_STRUC_RECAUDACION,contribuyente, TAME_STRUC_CONTRIBUYENTE);
 						break;
 					case 3:
 						informeC(recaudacion, TAME_STRUC_RECAUDACION,contribuyente, TAME_STRUC_CONTRIBUYENTE);

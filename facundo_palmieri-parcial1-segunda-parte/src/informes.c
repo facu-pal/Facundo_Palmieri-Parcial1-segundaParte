@@ -12,7 +12,22 @@
 #include <string.h>
 
 
+void informeB (Recaudacion arrayRecaudacion[], int lenRecaudaciones, Contribuyente ArrayContribuyente[], int lenContribuyente){
+	int auxId;
+	int idEmpleadoBuscar;
 
+
+	printf("\n\t> Listado Contribuyentes con una recaudacion saldada y un importe mas de 1000 ");
+	printf("\n %5s %10s %15s %15s\n", "ID","APELLIDO","NOMBRE","CUIT");
+	for(int i = 0; i < lenRecaudaciones; i++){
+		if(arrayRecaudacion[i].importe >= 1000 && arrayRecaudacion[i].estado == SALDADO){
+			auxId = arrayRecaudacion[i].idContribuyente;
+			idEmpleadoBuscar = findContribuyenteByIdParametro(ArrayContribuyente, lenContribuyente,&auxId);
+			printRecaudacion(ArrayContribuyente[idEmpleadoBuscar]);
+		}
+	}
+
+}
 
 
 void informeC (Recaudacion arrayRecaudacion[], int lenRecaudaciones, Contribuyente ArrayContribuyente[], int lenContribuyente){
@@ -22,7 +37,7 @@ void informeC (Recaudacion arrayRecaudacion[], int lenRecaudaciones, Contribuyen
 
 
 	utn_getInt(&tipo, "Ingrese el tipo  1.ARBA, 2.IIBB, 3.GANANCIAS", "Error,ingrese el tipo 1.ARBA, 2.IIBB, 3.GANANCIAS",1,3,2);
-	printf("\n\t> Listado Contribuyentes del tipo %d ",tipo);
+	printf("\n\t> Listado Contribuyentes del tipo %d ", tipo);
 	printf("\n %5s %10s %15s %15s\n", "ID","APELLIDO","NOMBRE","CUIT");
 	for(int i = 0; i < lenRecaudaciones; i++){
 		if(arrayRecaudacion[i].tipo == tipo){
