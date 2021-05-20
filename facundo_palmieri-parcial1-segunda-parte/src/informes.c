@@ -30,7 +30,6 @@ void informeC (Recaudacion arrayRecaudacion[], int lenRecaudaciones, Contribuyen
 
 }
 void informeD (Recaudacion arrayRecaudacion[], int lenRecaudaciones, Contribuyente ArrayContribuyente[], int lenContribuyente){
-	int tipo;
 	int auxId;
 	int idEmpleadoBuscar;
 

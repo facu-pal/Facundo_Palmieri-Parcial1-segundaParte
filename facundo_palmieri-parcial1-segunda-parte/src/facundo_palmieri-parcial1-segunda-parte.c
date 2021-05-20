@@ -122,10 +122,10 @@ int main(void) {
 				}
 				break;
 			case 7://Imprimir contribuyente
-
+				imprimirContribuyentes(contribuyente, TAME_STRUC_CONTRIBUYENTE);
 				break;
 			case 8://Imprimir recaudacion
-
+				printsRecaudaciones(recaudacion, TAME_STRUC_RECAUDACION);
 				break;
 			case 9://Informe
 			if (contContribuyente != 0 && contRecaudaciones != 0) {
@@ -149,8 +149,7 @@ int main(void) {
 						informeC(recaudacion, TAME_STRUC_RECAUDACION,contribuyente, TAME_STRUC_CONTRIBUYENTE);
 						break;
 					case 4:
-						printf("No lo hice informe c");
-
+						informeD(recaudacion, TAME_STRUC_RECAUDACION,contribuyente, TAME_STRUC_CONTRIBUYENTE);
 						break;
 					case 5: //salir
 						break;

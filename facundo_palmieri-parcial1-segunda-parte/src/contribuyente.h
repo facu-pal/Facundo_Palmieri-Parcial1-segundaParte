@@ -48,18 +48,18 @@ void printContribuyente(Contribuyente Contribuyente);
 * \param list Contribuyente* para toda la array
 * \param len int le pasa el tamaño de la array
 * \return int*/
-int imprimirContribuyentes(Contribuyente Empleado[], int len);
+int imprimirContribuyentes(Contribuyente Contribuyente[], int len);
 
 /*brief modifica a un empleado
  * param1 empleado[] employe pasa la array
  * param2 posicion int pasa solo la posicion de la array que se quiere modificar*/
-int modificaContribuyente(Contribuyente Empleado[], int posicion);
+int modificaContribuyente(Contribuyente Contribuyente[], int posicion);
 
 /*\brief Busca un empleado en el arrat.
 * \param list Contribuyente* pasa la array
 * \param len int pasa el tamaño de la array
 * \return Return devuelve la ID*/
-int  findContribuyenteById(Contribuyente Empleado[], int len,int *buscarID);
+int  findContribuyenteById(Contribuyente Contribuyente[], int len,int *buscarID);
 
 /** \brief Elimina de manera lógica (isEmpty Flag en 0) un empleado recibiendo como parámetro su Id.
 * \param list Contribuyente* pasa la array
