@@ -200,3 +200,7 @@ int findContribuyenteByIdParametro(Contribuyente Contribuyente[], int len, int *
 		}
 		return retorno;
 	}
+
+void printInformeD(Contribuyente array){
+	printf("\n%-15s %-15s ",array.nombre, array.cuit);
+}

@@ -14,6 +14,7 @@
 #include <string.h>
 #include "contribuyente.h"
 #include "recaudacion.h"
+#include "informes.h"
 
 
 int main(void) {
@@ -27,6 +28,7 @@ int main(void) {
 		int auxID;
 		int auxInt;
 		int posicion = -1;
+		int subMenuInforme;
 
 		Contribuyente contribuyente[TAME_STRUC_CONTRIBUYENTE];
 		Recaudacion recaudacion[TAME_STRUC_RECAUDACION];
@@ -44,7 +46,9 @@ int main(void) {
 			printf(" 6. Saldar recaudacion\n");
 			printf(" 7. Imprimir contribuyente\n");
 			printf(" 8. Imprimir recaudacion\n");
-			printf(" 9. Salir\n");
+			printf(" 9. Informes\n");
+			printf(" 10. Salir\n");
+
 			scanf("%d", &menu);
 			switch (menu) {
 			case 1://alta contribuyente
@@ -123,13 +127,47 @@ int main(void) {
 			case 8://Imprimir recaudacion
 
 				break;
-			case 9://salir
+			case 9://Informe
+			if (contContribuyente != 0 && contRecaudaciones != 0) {
+				do {
+					printf("\n Menu\n");
+					printf(" 1. Informe A\n");
+					printf(" 2. Informe B\n");
+					printf(" 3. Informe C\n");
+					printf(" 4. Informe D\n");
+					scanf("%d", &subMenuInforme);
+
+					switch (subMenuInforme) {
+					case 1:
+						printf("No lo hice informe A");
+						break;
+					case 2:
+						printf("No lo hice informe B");
+
+						break;
+					case 3:
+						informeC(recaudacion, TAME_STRUC_RECAUDACION,contribuyente, TAME_STRUC_CONTRIBUYENTE);
+						break;
+					case 4:
+						printf("No lo hice informe c");
+
+						break;
+					case 5: //salir
+						break;
+					default:
+						printf("No elegiste ninguna opcion \n");
+						break;
+					}
+				} while (subMenuInforme != 5);
+			}
+				break;
+			case 10://salir
 				break;
 			default:
 				printf("No elegiste ninguna opcion \n");
 			}
 
-		} while (menu != 9);
+		} while (menu != 10);
 
 		return EXIT_SUCCESS;
 	}

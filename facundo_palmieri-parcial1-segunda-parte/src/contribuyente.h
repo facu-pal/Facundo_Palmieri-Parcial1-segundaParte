@@ -42,7 +42,7 @@ int addContribuyente(Contribuyente* array,int len, int* contadorId);
 
 /*\Imprime solo un empleado del array.
 * \param Empleado Contribuyente*/
-void printContribuyente(Contribuyente Empleado);
+void printContribuyente(Contribuyente Contribuyente);
 
 /*\Imprime todos los empleados de la array.
 * \param list Contribuyente* para toda la array
@@ -69,5 +69,6 @@ int removeContribuyente(Contribuyente* list,int posicion);
 
 int findContribuyenteByIdParametro(Contribuyente Contribuyente[], int len, int *buscarID);
 
+void printInformeD(Contribuyente array);
 
 #endif /* CONTRIBUYENTE_H_ */
