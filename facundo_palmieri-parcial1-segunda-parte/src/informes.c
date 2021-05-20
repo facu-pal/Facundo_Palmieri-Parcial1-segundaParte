@@ -11,6 +11,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+
+
+
 void informeC (Recaudacion arrayRecaudacion[], int lenRecaudaciones, Contribuyente ArrayContribuyente[], int lenContribuyente){
 	int tipo;
 	int auxId;
@@ -37,7 +41,7 @@ void informeD (Recaudacion arrayRecaudacion[], int lenRecaudaciones, Contribuyen
 	printf("\n %15s %15s\n", "NOMBRE","CUIT");
 
 	for(int i = 0; i < lenRecaudaciones; i++){
-		if(arrayRecaudacion[i].mes == 1){
+		if(arrayRecaudacion[i].mes == 2){
 			auxId = arrayRecaudacion[i].idContribuyente;
 			idEmpleadoBuscar = findContribuyenteByIdParametro(ArrayContribuyente, lenContribuyente,&auxId);
 			printInformeD(ArrayContribuyente[idEmpleadoBuscar]);
